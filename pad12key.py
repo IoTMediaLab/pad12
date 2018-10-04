@@ -30,8 +30,6 @@ def GPIO_INIT():
     chan_list = [R1,R2,R3,R4]
     GPIO.setup(chan_list,GPIO.IN)
 
-
-
 def get():
 
     c_list = [C1,C2,C3]
