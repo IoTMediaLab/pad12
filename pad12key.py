@@ -48,7 +48,9 @@ if __name__ == '__main__':
     ''' テスト用メイン関数 '''
     GPIO_INIT()
 
+    GPIO.output(C1,GPIO.HIGH)
+
     while(1):
-        get()
+        print(GPIO.input(R1))
 
     GPIO.cleanup()
