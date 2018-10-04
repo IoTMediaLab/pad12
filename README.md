@@ -19,3 +19,12 @@ https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm
 ~~~
 
 ----
+
+接続結線  
+
+
+|KeyPad側→|0|1|2|3|4|5|6|7|  
+|--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| |GND|COL2|ROW1|COL1|ROW4|COL3|ROW3|ROW2|  
+|RasPi側Pin→|6|8|11|7|15|10|13|12|  
+
