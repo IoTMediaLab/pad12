@@ -7,6 +7,7 @@ https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm
 
 他のプログラムから呼び出すときは、  
 
+~~~
  #初期設定  
  import pad12key  
  pad12key.GPIO_INIT()  
@@ -15,3 +16,6 @@ https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm
  #その後、  
  keyNo = pad12key.get()  
  #↑これでkeyNoに1～12までが入ります。
+~~~
+
+----
