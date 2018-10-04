@@ -22,6 +22,7 @@ R4 = IN4 = GPIO22 = 15
 
 def GPIO_INIT():
     ''' GPIO INIT '''
+    GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BOARD) #GPIOへアクセスする番号を ボードのPIN番号とする
 
     chan_list = [R1,R2,R3,R4]
@@ -34,23 +35,29 @@ def get():
 
     c_list = [C1,C2,C3]
     r_list = [R1,R2,R3,R4]
-    #GPIO.output(chan_list,GPIO.HIGH)
+
+    ret = 0
 
     for i,r in enumerate(r_list):
         GPIO.output(r,GPIO.HIGH)
         for j,c in enumerate(c_list):
-            print('R'+str(j+1),GPIO.input(c),'  ',end='')
+            #print('R'+str(j+1),GPIO.input(c),'  ',end='')
+            if(GPIO.input(c)):
+               ret = j + i*3 +1
         GPIO.output(r,GPIO.LOW)
-        print(' ')
+    #print(':',ret)
+    return ret
 
 
 if __name__ == '__main__':
     ''' テスト用メイン関数 '''
     GPIO_INIT()
 
-    GPIO.output(R1,GPIO.HIGH)
-
     while(1):
-        print(GPIO.input(C1))
+      print(get())
+    #GPIO.output(R1,GPIO.HIGH)
+
+    #while(1):
+    #    print(GPIO.input(C1))
 
     GPIO.cleanup()
