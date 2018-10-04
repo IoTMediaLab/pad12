@@ -1,5 +1,5 @@
-# pad12
-12key pad with raspberry pi
+# 12キーパッドをRaspberryPiで使用するためのpythonモジュール
+12-Numeric keypad attached to raspberry pi
 
 １２キーPadをスキャンしてキーONをチェック  
 https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm  
@@ -20,11 +20,9 @@ https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm
 
 ----
 
-接続結線  
-
+### RaspberryPiと12KeyPad間の結線は以下の通り
 
 |KeyPad側→|0|1|2|3|4|5|6|7|  
 |--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | |GND|COL2|ROW1|COL1|ROW4|COL3|ROW3|ROW2|  
 |RasPi側Pin→|6|8|11|7|15|10|13|12|  
-
