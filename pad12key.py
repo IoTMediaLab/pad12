@@ -4,6 +4,15 @@
    １２キーPadをスキャンしてキーONをチェック
    https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm
    ↑対象はこれ。（のコピー品と思われる http://www.aitendo.com/product/17251 これ）
+
+   他のプログラムから呼び出すときは、
+
+   #初期設定
+   import pad12key
+   GPIO_INIT()
+
+   keyNo = pad12key.get()
+   #↑これでkeyNoに1～12までが入ります。
 '''
 
 import RPi.GPIO as GPIO  #GPIOにアクセスするライブラリをimportします。
@@ -32,7 +41,7 @@ def GPIO_INIT():
     GPIO.setup(chan_list,GPIO.IN)
 
 def get():
-
+    ''' キーをスキャンしてキー番号 1～12をint値で返す '''
     c_list = [C1,C2,C3]
     r_list = [R1,R2,R3,R4]
 
@@ -55,9 +64,5 @@ if __name__ == '__main__':
 
     while(1):
       print(get())
-    #GPIO.output(R1,GPIO.HIGH)
-
-    #while(1):
-    #    print(GPIO.input(C1))
 
     GPIO.cleanup()
