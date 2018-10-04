@@ -7,12 +7,14 @@
 
    他のプログラムから呼び出すときは、
 
-   #初期設定
-   import pad12key
-   GPIO_INIT()
+    #初期設定
+    import pad12key
+    pad12key.GPIO_INIT()
+    #↑これは最初に一度だけ実行
 
-   keyNo = pad12key.get()
-   #↑これでkeyNoに1～12までが入ります。
+    #その後、
+    keyNo = pad12key.get()
+    #↑これでkeyNoに1～12までが入ります。
 '''
 
 import RPi.GPIO as GPIO  #GPIOにアクセスするライブラリをimportします。
@@ -27,7 +29,6 @@ R1 = IN1 = GPIO17 = 11
 R2 = IN2 = GPIO18 = 12
 R3 = IN3 = GPIO27 = 13
 R4 = IN4 = GPIO22 = 15
-
 
 def GPIO_INIT():
     ''' GPIO INIT '''
