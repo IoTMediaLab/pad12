@@ -15,7 +15,7 @@ https://www.jw-shop.com/P-keyboard-hmodule10/page119/detail.htm
 
  #その後、  
  keyNo = pad12key.get()  
- #↑これでkeyNoに1～12までが入ります。
+ #↑これでkeyNoに1～12までが入ります。無入力ならば0、同時押しはNoが大きい方優先
 ~~~
 
 ----
